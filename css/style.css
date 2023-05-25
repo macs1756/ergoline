@@ -396,6 +396,8 @@ a {
 }
 
 .btn-full {
+  padding-top: 13px;
+  padding-bottom: 13px;
   background: #9C5A43;
   color: #fff;
   -webkit-transition: all 0.3s linear;
@@ -732,6 +734,11 @@ header {
   line-height: 175%;
 }
 
+.header__tell-burger {
+  -webkit-animation: trin 3s linear infinite normal 0s forwards;
+          animation: trin 3s linear infinite normal 0s forwards;
+}
+
 @-webkit-keyframes trin {
   from {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
@@ -1013,6 +1020,116 @@ h1 {
           transform: translateY(-50%);
 }
 
+.advantage {
+  background: #9C5A43;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  color: #F5F5F5;
+  margin-top: -100px;
+}
+
+.advantage h3 {
+  font-weight: 100;
+  letter-spacing: -0.04em;
+  font-size: 68px;
+  line-height: 140%;
+}
+
+.advantage section {
+  font-weight: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+
+.advantage section img {
+  margin-right: 24px;
+}
+
+.advantage section p {
+  font-size: 36px;
+}
+
+.advantage section img {
+  width: 40px;
+}
+
+.advantages__net-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.advantages__list {
+  padding-top: 50px;
+}
+
+.solariums {
+  color: #111111;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.solariums__p-2 {
+  margin-bottom: 48px;
+}
+
+.solariums__p-2 a {
+  color: #9C5A43;
+}
+
+.solariums__net {
+  margin-bottom: 48px;
+}
+
+.solariums__net-item {
+  max-width: 25%;
+}
+
+.solariums__net-item img {
+  margin-bottom: 40px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.solariums__net-item h3 {
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.solariums__net-item section {
+  gap: 8px;
+  margin-bottom: 4px;
+  line-height: 170%;
+}
+
+.solariums__net-item section label {
+  color: #AAAAAA;
+}
+
+.solariums__net-item p {
+  line-height: 175%;
+}
+
+.solariums__buttons {
+  gap: 20px;
+}
+
+.solariums__buttons button {
+  width: 300px;
+}
+
+.solariums__title-wr {
+  text-align: center;
+  line-height: 170%;
+}
+
 footer {
   height: 200vh;
 }
@@ -1136,6 +1253,58 @@ footer {
   .preview__glery-2 img {
     border-radius: calc(16px + 24 * ((100vw - 320px) / 1440));
   }
+
+  .advantage {
+    padding-bottom: calc(40px + 20 * ((100vw - 320px) / 1440));
+  }
+
+  .advantage h3 {
+    font-size: calc(20px + 48 * ((100vw - 320px) / 1440));
+  }
+
+  .advantage section {
+    margin-bottom: calc(16px + 16 * ((100vw - 320px) / 1440));
+  }
+
+  .advantage section img {
+    margin-right: calc(16px + 8 * ((100vw - 320px) / 1440));
+  }
+
+  .advantage section p {
+    font-size: calc(14px + 22 * ((100vw - 320px) / 1440));
+  }
+
+  .advantages__list {
+    padding-top: calc(16px + 34 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums {
+    padding-top: calc(80px + 40 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums {
+    padding-bottom: calc(80px + 40 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums__p-2 {
+    margin-bottom: calc(24px + 24 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums__net {
+    margin-bottom: calc(24px + 24 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums__net-item img {
+    margin-bottom: calc(16px + 24 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums__net-item img {
+    border-radius: calc(12px + 28 * ((100vw - 320px) / 1440));
+  }
+
+  .solariums__net-item h3 {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1440));
+  }
 }
 
 @media (max-width: 992px) {
@@ -1174,6 +1343,10 @@ footer {
   .preview__net-text {
     margin-top: -280px;
   }
+
+  .advantage {
+    margin-top: 60px;
+  }
 }
 
 @media (max-width: 992px) and (max-width: 1440px) {
@@ -1194,6 +1367,22 @@ footer {
     -webkit-transform: translateY(-150%);
         -ms-transform: translateY(-150%);
             transform: translateY(-150%);
+  }
+
+  .advantage h3 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .advantages__net {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .advantages__net-item {
+    width: 100%;
   }
 }
 
@@ -1390,6 +1579,31 @@ footer {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .advantage section img {
+    width: 32px;
+  }
+
+  .solariums__net-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .solariums__net-item {
+    font-size: 14px;
+  }
+
+  .solariums__buttons button {
+    width: 100%;
+  }
+
+  .solariums__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) and (max-width: 1440px) {
@@ -1405,6 +1619,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+
   header {
     height: 60px;
   }
@@ -1429,6 +1648,10 @@ footer {
 
   .preview__button-type {
     width: 100%;
+  }
+
+  .advantage h3 {
+    font-weight: 600;
   }
 }
 
