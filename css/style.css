@@ -165,7 +165,7 @@ a {
 
 .content {
   margin: 0 auto;
-  max-width: 1215px;
+  max-width: 1420px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -1084,10 +1084,7 @@ h1 {
 
 .solariums__net {
   margin-bottom: 48px;
-}
-
-.solariums__net-item {
-  max-width: 25%;
+  overflow: hidden;
 }
 
 .solariums__net-item img {
@@ -1130,6 +1127,321 @@ h1 {
   line-height: 170%;
 }
 
+.solariums__slider-next,
+.solariums__slider-prev {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 26px;
+          flex: 0 0 26px;
+  padding-top: 40%;
+}
+
+.solariums__slider-next img,
+.solariums__slider-prev img {
+  width: 20px;
+}
+
+.solariums__slider-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.solariums__slider-next img {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.autosolariums {
+  padding-bottom: 120px;
+  line-height: 175%;
+  color: #111111;
+}
+
+.autosolariums label {
+  display: inline-block;
+}
+
+.autosolariums h4 {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.autosolariums a {
+  min-width: 230px;
+  display: inline-block;
+}
+
+.autosolariums__first {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+  margin-bottom: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.3fr 0.7fr;
+  grid-template-columns: 0.3fr 0.7fr;
+  gap: 20px;
+  place-items: center;
+}
+
+.autosolariums__first section {
+  margin-bottom: 4px;
+}
+
+.autosolariums__first section label {
+  margin-right: 8px;
+}
+
+.autosolariums__first section p {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.autosolariums__p {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.autosolariums__first-img,
+.autosolariums__second-img {
+  max-width: 450px;
+}
+
+.autosolariums__first-img img,
+.autosolariums__second-img img {
+  border-radius: 40px;
+  width: 100%;
+}
+
+.autosolariums__second {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.7fr 0.3fr;
+  grid-template-columns: 0.7fr 0.3fr;
+  gap: 20px;
+  place-items: center;
+}
+
+.autosolariums__second-p {
+  margin-bottom: 24px;
+}
+
+.autosolariums__second-price {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.price {
+  position: relative;
+  color: #fff;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.price h2 {
+  color: #fff;
+}
+
+.price .swiper-slide {
+  height: auto;
+  padding-top: 45px;
+}
+
+.price__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.price__bg-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.price__body {
+  position: relative;
+  z-index: 5;
+}
+
+.price__title {
+  margin-bottom: 40px;
+}
+
+.price__bottom {
+  text-align: center;
+  line-height: 175%;
+}
+
+.price__prev,
+.price__next {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+}
+
+.price__next img {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.price__net-item {
+  position: relative;
+  background: rgba(17, 17, 17, 0.1);
+  border: 1px solid #FFFFFF;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 40px;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.price__net-item ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.price__net-item h5 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+}
+
+.price__net-item li,
+.price__net-item p {
+  line-height: 140%;
+}
+
+.price__net-item li {
+  padding: 5px 0;
+}
+
+.price__net-item button {
+  max-width: 200px;
+  width: 100%;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.price__item-first {
+  background: #D0D0D0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-weight: 600;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.price__slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.price__item-title-wr {
+  padding-left: 18%;
+  padding-right: 18%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.price__item-title,
+.price__item-first-title {
+  padding: 18px 11px;
+  background: rgba(17, 17, 17, 0.1);
+  border: 2px dashed #F2F2F2;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+  .price__net-item,
+  .price__item-first-title {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .price__item-title,
+  .price__item-first-title {
+    background: #242A35;
+  }
+}
+
+.price__item-first-title {
+  font-size: 24px;
+}
+
+.price__item-first-title,
+.price__item-title {
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+.price__item-first-title p,
+.price__item-title p {
+  width: 100%;
+}
+
+.line {
+  width: 90px;
+  height: 1px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.price__item-title {
+  font-size: 40px;
+}
+
+.price__slider {
+  min-width: 0;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
 footer {
   height: 200vh;
 }
@@ -1143,6 +1455,17 @@ footer {
     display: none;
     -o-object-position: 25% 0%;
        object-position: 25% 0%;
+  }
+}
+
+@media (min-width: 992px) {
+  .solariums__slider-next,
+  .solariums__slider-prev {
+    display: none;
+  }
+
+  .price__net-arrow {
+    display: none;
   }
 }
 
@@ -1305,6 +1628,63 @@ footer {
   .solariums__net-item h3 {
     font-size: calc(18px + 6 * ((100vw - 320px) / 1440));
   }
+
+  .autosolariums {
+    padding-bottom: calc(80px + 40 * ((100vw - 320px) / 1440));
+  }
+
+  .autosolariums h4 {
+    font-size: calc(18px + 8 * ((100vw - 320px) / 1440));
+  }
+
+  .autosolariums__first {
+    margin-top: calc(32px + 16 * ((100vw - 320px) / 1440));
+  }
+
+  .autosolariums__first section p {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 1440));
+  }
+
+  .autosolariums__first-img img,
+  .autosolariums__second-img img {
+    border-radius: calc(12px + 28 * ((100vw - 320px) / 1440));
+  }
+
+  .autosolariums__second-p {
+    margin-bottom: calc(16px + 8 * ((100vw - 320px) / 1440));
+  }
+
+  .autosolariums__second-price {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1440));
+  }
+
+  .price {
+    padding-bottom: calc(60px + 40 * ((100vw - 320px) / 1440));
+  }
+
+  .price {
+    padding-top: calc(60px + 40 * ((100vw - 320px) / 1440));
+  }
+
+  .price__title {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 1440));
+  }
+
+  .price__net-item {
+    padding-left: calc(8px + 12 * ((100vw - 320px) / 1440));
+  }
+
+  .price__net-item {
+    padding-right: calc(8px + 12 * ((100vw - 320px) / 1440));
+  }
+
+  .price__net-item h5 {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1440));
+  }
+
+  .price__item-first-title {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1440));
+  }
 }
 
 @media (max-width: 992px) {
@@ -1346,6 +1726,38 @@ footer {
 
   .advantage {
     margin-top: 60px;
+  }
+
+  .autosolariums__first {
+    place-items: start;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 60px;
+  }
+
+  .autosolariums__first-text {
+    padding-top: 20px;
+  }
+
+  .autosolariums__second {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 0;
+    place-items: start;
+  }
+
+  .autosolariums__second-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-top: 20px;
+  }
+
+  .autosolariums__second-img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -1585,11 +1997,6 @@ footer {
   }
 
   .solariums__net-item {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .solariums__net-item {
     font-size: 14px;
   }
 
@@ -1603,6 +2010,28 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+  }
+
+  .autosolariums__first section label {
+    font-size: 14px;
+  }
+
+  .autosolariums__p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .price__net-item li,
+  .price__net-item p {
+    font-size: 14px;
+  }
+
+  .price__item-title {
+    font-size: 36px;
+  }
+
+  .price__slider {
+    padding-bottom: 16px;
   }
 }
 
@@ -1653,6 +2082,16 @@ footer {
   .advantage h3 {
     font-weight: 600;
   }
+
+  .solariums__slider-next img,
+  .solariums__slider-prev img {
+    width: 16px;
+  }
+
+  .autosolariums a {
+    width: 100%;
+    display: block;
+  }
 }
 
 @media (any-hover: hover) {
@@ -1689,5 +2128,9 @@ footer {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     color: #FDDD04;
+  }
+
+  .price__item-first:hover {
+    background: #aeacac;
   }
 }

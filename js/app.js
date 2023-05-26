@@ -53,3 +53,64 @@ document.querySelector('.modal').addEventListener('click', function(e){
 document.querySelector('.modal__close').addEventListener('click', ()=>{
 	MODAL_BODY.classList.add("out");
 });
+
+
+
+const swiper = new Swiper('.solariums__net', {
+	
+	spaceBetween: 20,
+	autoheight: true,
+
+	breakpoints: {
+
+		0: {
+			slidesPerView: 1,
+			loop: true
+		},
+
+		600: {
+			slidesPerView: 2,
+			loop: true
+		},
+
+
+		992:{
+			slidesPerView: 4,
+		}
+	},
+	navigation: {
+		nextEl: '.solariums__slider-next',
+		prevEl: '.solariums__slider-prev',
+	 },
+
+});
+
+
+
+const swiperPrice = new Swiper('.price__slider', {
+	
+	spaceBetween: 20,
+	breakpoints: {
+
+		0: {
+			slidesPerView: 1,
+			loop: true
+		},
+
+		600: {
+			slidesPerView: 2,
+			loop: true
+		},
+
+
+		992:{
+			slidesPerView: 4,
+		}
+	},
+	navigation: {
+		nextEl: '.price__next',
+		prevEl: '.price__prev',
+	 },
+
+});
+
