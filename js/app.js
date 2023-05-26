@@ -114,3 +114,80 @@ const swiperPrice = new Swiper('.price__slider', {
 
 });
 
+
+
+function openTab(evt, tabName) {
+	// Закриваємо всі вкладки
+	var i, tabContent, tabLinks;
+	tabContent = document.getElementsByClassName("tab-content");
+	for (i = 0; i < tabContent.length; i++) {
+	  tabContent[i].style.display = "none";
+	}
+
+	document.querySelectorAll('.tab').forEach((tab)=>{
+		tab.classList.remove('active');
+	})
+
+
+	evt.target.classList.add('active');
+	document.getElementById(tabName).style.display = "block";
+ }
+
+
+
+ const swiperMakeup = new Swiper('.makeup__slider', {
+	loop: true,
+	spaceBetween: 14,
+	breakpoints: {
+
+		0: {
+			slidesPerView: 1,
+		
+		},
+
+		600: {
+			slidesPerView: 2,
+		
+		},
+
+		767: {
+			slidesPerView: 3,
+			
+		},
+		992:{
+			slidesPerView: 4,
+			
+		},
+
+		1300: {
+			slidesPerView: 5,
+			
+		}
+	},
+	navigation: {
+		nextEl: '.makeup__next',
+		prevEl: '.makeup__prev',
+	 },
+
+});
+
+
+ const swiperPromotions = new Swiper('.promotions__net-body', {
+	loop: true,
+	spaceBetween: 20,
+	slidesPerView: 1,
+	navigation: {
+		nextEl: '.promotions-next',
+		prevEl: '.promotions-prev',
+	 },
+
+});
+
+$(document).ready(function() {
+	$('.question__net-title').click(function() {
+	  // Показываем или скрываем контент
+	  $(this).next('.question__net-body').slideToggle();
+	  // Добавляем или удаляем класс rotate
+	  $(this).toggleClass('rotate');
+	});
+ });
