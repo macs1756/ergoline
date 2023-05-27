@@ -1,7 +1,9 @@
 
 
 setTimeout(()=>{
-	document.querySelector('header').classList.add('active');
+	document.querySelector('h1').classList.add('active');
+	document.querySelector('.initial__btn').classList.add('active');
+
 },500)
 
 
@@ -283,11 +285,28 @@ buttonSend.addEventListener('click', ()=>{
 if(formName.value.length >= 3 && formPhone.value.length >= 3){
 	postMail();
 }
+});
 
 
 
 
-})
+const observer = new IntersectionObserver((entries, observer) => {
+	entries.forEach(entry => {
+	  if (entry.isIntersecting) {
+		 // Додати клас "актів", коли елемент потрапляє в активну зону
+		 entry.target.classList.add("active");
+		 // Зупинити спостереження для цього елемента, коли воно було анімовано
+		 observer.unobserve(entry.target);
+	  }
+	  threshold: 0.8
+	});
+ });
+ 
+ // Виберіть всі елементи з класом "anim" та додайте їх до спостереження
+ const elements = document.querySelectorAll(".anim");
+ elements.forEach(element => {
+	observer.observe(element);
+ });
 
 
 

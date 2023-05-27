@@ -585,6 +585,23 @@ h2 span {
   opacity: 0.5;
 }
 
+.anim {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.anim.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .cen {
   text-align: center;
 }
@@ -690,24 +707,13 @@ header {
   left: 0;
   width: 100%;
   z-index: 500;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
   -webkit-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  opacity: 0;
   padding: 10px 0;
   background: rgba(17, 17, 17, 0.3);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-}
-
-header.active {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
 }
 
 .header__scroll {
@@ -963,6 +969,34 @@ h1 {
   background-color: rgb(221, 217, 217);
 }
 
+h1,
+.initial__btn {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+h1 {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.initial__btn {
+  -webkit-transition: all 0.3s linear 0.3s !important;
+  -o-transition: all 0.3s linear 0.3s !important;
+  transition: all 0.3s linear 0.3s !important;
+}
+
+h1.active,
+.initial__btn.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .preview {
   padding-top: 115px;
   padding-top: 125px;
@@ -1057,6 +1091,12 @@ h1 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-transform: translateY(calc(-50% + 30px));
+      -ms-transform: translateY(calc(-50% + 30px));
+          transform: translateY(calc(-50% + 30px));
+}
+
+.preview__glery-2.active {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
