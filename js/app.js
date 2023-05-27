@@ -1,9 +1,18 @@
 
+
+setTimeout(()=>{
+	document.querySelector('header').classList.add('active');
+},500)
+
+
+
+
 const btnBurger = document.querySelector(".header__burger");
 const burger = document.querySelector(".burger__open");
 btnBurger.addEventListener("click", item =>{
 		btnBurger.classList.toggle("close");
 });
+
 
 btnBurger.addEventListener("click", ()=>{
 		document.querySelector("body").classList.toggle("scrollNone");
@@ -54,14 +63,13 @@ document.querySelector('.modal__close').addEventListener('click', ()=>{
 const swiper = new Swiper('.solariums__net', {
 	
 	spaceBetween: 20,
-	autoheight: true,
+	autoHeight: true,
 
 	breakpoints: {
 
 		0: {
 			slidesPerView: 1,
 			loop: true,
-			autoheight: true,
 		},
 
 		600: {
@@ -192,7 +200,7 @@ $(document).ready(function() {
  const swiperReview = new Swiper('.review__body', {
 	loop: true,
 	spaceBetween: 20,
-	autoheight: true,
+	autoHeight: true,
 	breakpoints: {
 
 		0: {
@@ -214,3 +222,77 @@ $(document).ready(function() {
 		prevEl: '.review-prev',
 	 },
 });
+
+
+
+
+const buttonSend = document.querySelector('#form-send');
+
+const formName = document.querySelector('#modal-name');
+const formPhone = document.querySelector('#modal-phone');
+
+
+const studioVariant1 = document.querySelector('#studioVariant1');
+
+buttonSend.addEventListener('click', ()=>{
+
+
+	if(formName.value.length >= 3){
+			formName.style.border = '1px solid #111111';
+	}else{
+		formName.style.border = '1px solid red';
+	}
+
+
+	if(formPhone.value.length >= 3){
+		formPhone.style.border = '1px solid #111111';
+	}else{
+		formPhone.style.border = '1px solid red';
+	}
+
+
+	async function postMail(){
+		    
+		
+		buttonSend.setAttribute('disabled', true);
+		
+	  let res = await fetch("null", {
+		 method: "POST",
+		 body: JSON.stringify({
+
+			name: formName.value,
+
+			tell: formPhone.value,
+
+			studio: studioVariant1.checked ? 'Ergoline' : 'Ibiza',
+			
+		 }),
+	  });
+	
+	  if(res.ok){
+				 
+
+		buttonSend.removeAttribute('disabled');
+
+	  }else{
+		 alert('error send messange');
+	  }	
+}
+
+
+if(formName.value.length >= 3 && formPhone.value.length >= 3){
+	postMail();
+}
+
+
+
+
+})
+
+
+
+
+
+
+
+

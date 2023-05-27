@@ -44,6 +44,9 @@ input,
 button,
 textarea {
   font-family: inherit;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 input::-ms-clear {
@@ -505,6 +508,24 @@ input[type=radio] {
   border-radius: 50%;
   display: inline-block;
   border: 2px solid #111111;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+.radio__item label:after {
+  content: url("../img/modal__arrow.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .radio__item span {
@@ -526,7 +547,14 @@ label {
 }
 
 input[type=radio]:checked ~ label {
-  background: #9C5A43;
+  border: 1px solid transparent;
+}
+
+input[type=radio]:checked ~ label:after {
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .modal__close {
@@ -551,6 +579,10 @@ h2 {
 
 h2 span {
   color: #9C5A43;
+}
+
+#form-send:disabled {
+  opacity: 0.5;
 }
 
 .cen {
@@ -658,13 +690,24 @@ header {
   left: 0;
   width: 100%;
   z-index: 500;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  opacity: 0;
   padding: 10px 0;
   background: rgba(17, 17, 17, 0.3);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
+}
+
+header.active {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .header__scroll {
@@ -881,9 +924,7 @@ header {
   left: 0;
   top: 0;
   z-index: 3;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .initial__body {

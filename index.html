@@ -8,10 +8,10 @@
 	<title>Студія засмаги Ergoline</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap&_v=20230527124218"
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap&_v=20230527133618"
 		rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230527124218" />
-	<link rel="stylesheet" href="css/style.css?_v=20230527124218">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230527133618" />
+	<link rel="stylesheet" href="css/style.css?_v=20230527133618">
 </head>
 
 <body>
@@ -750,7 +750,7 @@
 							<p class="makeup__item-last-p">10 ml</p>
 							<h6 class="makeup__item-price">69 грн.</h6>
 
-							<button class="w100 btn-full">Замовити</button>
+							<button class="w100 btn-full modal-active">Замовити</button>
 						</div>
 
 					</div>
@@ -769,7 +769,7 @@
 							<p class="makeup__item-last-p">10 ml</p>
 							<h6 class="makeup__item-price">69 грн.</h6>
 
-							<button class="w100 btn-full">Замовити</button>
+							<button class="w100 btn-full modal-active">Замовити</button>
 						</div>
 
 					</div>
@@ -788,7 +788,7 @@
 							<p class="makeup__item-last-p">10 ml</p>
 							<h6 class="makeup__item-price">69 грн.</h6>
 
-							<button class="w100 btn-full">Замовити</button>
+							<button class="w100 btn-full modal-active">Замовити</button>
 						</div>
 
 					</div>
@@ -809,7 +809,7 @@
 							<p class="makeup__item-last-p">10 ml</p>
 							<h6 class="makeup__item-price">69 грн.</h6>
 
-							<button class="w100 btn-full">Замовити</button>
+							<button class="w100 btn-full modal-active">Замовити</button>
 						</div>
 
 					</div>
@@ -828,7 +828,7 @@
 							<p class="makeup__item-last-p">10 ml</p>
 							<h6 class="makeup__item-price">69 грн.</h6>
 
-							<button class="w100 btn-full">Замовити</button>
+							<button class="w100 btn-full modal-active">Замовити</button>
 						</div>
 
 					</div>
@@ -847,7 +847,7 @@
 							<p class="makeup__item-last-p">10 ml</p>
 							<h6 class="makeup__item-price">69 грн.</h6>
 
-							<button class="w100 btn-full">Замовити</button>
+							<button class="w100 btn-full modal-active">Замовити</button>
 						</div>
 
 					</div>
@@ -1007,7 +1007,7 @@
 								
 								
 									<div class="promotions__item-button-wr">
-										<button class="btn-full w100">Детальніше</button>
+										<button class="btn-full w100 modal-active">Детальніше</button>
 									</div>
 									
 								</div>
@@ -1039,7 +1039,7 @@
 								
 								
 									<div class="promotions__item-button-wr">
-										<button class="btn-full w100">Детальніше</button>
+										<button class="btn-full w100 modal-active">Детальніше</button>
 									</div>
 									
 								</div>
@@ -1072,7 +1072,7 @@
 								
 								
 									<div class="promotions__item-button-wr">
-										<button class="btn-full w100">Детальніше</button>
+										<button class="btn-full w100 modal-active">Детальніше</button>
 									</div>
 									
 								</div>
@@ -1354,18 +1354,19 @@
 
 					<div class="modal__checkbox modal__grid d-flex a-i-start">
 						<div class="modal__grid-item d-flex a-i-center radio__item">
-							<label for="studioVariant1">
-								<input checked id="studioVariant1" name="type-studio" type="radio">
-							</label>
+
+							<input checked id="studioVariant1" name="type-studio" type="radio">
+							<label for="studioVariant1"></label>
+
+
 							<span>Студія засмаги Ergoline пр. Гагаріна, 7</span>
 						</div>
 
 
 						<div class="modal__grid-item d-flex a-i-center radio__item">
 
-							<label for="studioVariant2">
-								<input id="studioVariant2" name="type-studio" type="radio">
-							</label>
+							<input id="studioVariant2" name="type-studio" type="radio">
+							<label for="studioVariant2"></label>
 
 							<span>Студія засмаги Ібіца вул. Мономаха, 5</span>
 						</div>
@@ -1374,7 +1375,7 @@
 
 
 
-					<button class="btn-full">Записатись на сеанс</button>
+					<button id="form-send" class="btn-full">Записатись на сеанс</button>
 
 
 				</div>
@@ -1384,9 +1385,9 @@
 		</div>
 	</div>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20230527124218"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230527124218"></script>
-	<script src="js/app.js?_v=20230527124218"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20230527133618"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230527133618"></script>
+	<script src="js/app.js?_v=20230527133618"></script>
 </body>
 
 </html>
