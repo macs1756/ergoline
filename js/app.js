@@ -21,11 +21,6 @@ window.addEventListener("scroll", ()=>{
 	}
 });
 
-
-
-
-
-
 const MODAL_BUTTON = document.querySelectorAll(".modal-active");
 
 	const MODAL_BODY = document.querySelector("#modal-container");
@@ -65,7 +60,8 @@ const swiper = new Swiper('.solariums__net', {
 
 		0: {
 			slidesPerView: 1,
-			loop: true
+			loop: true,
+			autoheight: true,
 		},
 
 		600: {
@@ -94,7 +90,8 @@ const swiperPrice = new Swiper('.price__slider', {
 
 		0: {
 			slidesPerView: 1,
-			loop: true
+			loop: true,
+			autoheight: true,
 		},
 
 		600: {
@@ -142,7 +139,7 @@ function openTab(evt, tabName) {
 
 		0: {
 			slidesPerView: 1,
-		
+			autoheight: true,
 		},
 
 		600: {
@@ -191,3 +188,29 @@ $(document).ready(function() {
 	  $(this).toggleClass('rotate');
 	});
  });
+
+ const swiperReview = new Swiper('.review__body', {
+	loop: true,
+	spaceBetween: 20,
+	autoheight: true,
+	breakpoints: {
+
+		0: {
+			slidesPerView: 1,
+			
+		},
+
+		600: {
+			slidesPerView: 2,
+			
+		},
+		992:{
+			slidesPerView: 3,
+			
+		},
+	},
+	navigation: {
+		nextEl: '.review-next',
+		prevEl: '.review-prev',
+	 },
+});
