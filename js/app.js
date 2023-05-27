@@ -289,24 +289,27 @@ if(formName.value.length >= 3 && formPhone.value.length >= 3){
 
 
 
-
 const observer = new IntersectionObserver((entries, observer) => {
 	entries.forEach(entry => {
 	  if (entry.isIntersecting) {
-		 // Додати клас "актів", коли елемент потрапляє в активну зону
+		 // Вхід елемента в активну зону
 		 entry.target.classList.add("active");
-		 // Зупинити спостереження для цього елемента, коли воно було анімовано
-		 observer.unobserve(entry.target);
+	  } else {
+		 // Вихід елемента з активної зони
+		 entry.target.classList.remove("active");
 	  }
-	  threshold: 0.8
 	});
+ }, {
+	threshold: 0.5 // Встановлення значення threshold
  });
  
- // Виберіть всі елементи з класом "anim" та додайте їх до спостереження
- const elements = document.querySelectorAll(".anim");
- elements.forEach(element => {
-	observer.observe(element);
- });
+ // Виберіть елемент, який ви хочете спостерігати
+ const arrAnim = document.querySelectorAll(".anim");
+ 
+ arrAnim.forEach((el)=>{
+	observer.observe(el);
+ })
+ // Додайте елемент до спостерігача
 
 
 
