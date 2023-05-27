@@ -294,6 +294,8 @@ const observer = new IntersectionObserver((entries, observer) => {
 	  if (entry.isIntersecting) {
 		 // Вхід елемента в активну зону
 		 entry.target.classList.add("active");
+		 observer.unobserve(entry.target);
+		 
 	  } else {
 		 // Вихід елемента з активної зони
 		 entry.target.classList.remove("active");
